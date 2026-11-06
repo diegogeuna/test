@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+nav {
+    padding: 20px 60px;
+    background-color: whitesmoke;
+}
+
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav div div {
+    display: flex;
+    gap: 10px;
+}
+
+nav .container div ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+nav .container div ul li a {
+    text-decoration: none;
+    color: #04062a;
+    padding: 4px;
+}
+
+nav .container div ul li:first-child a {
+    color: #055fdc;
+    border-bottom: 3px solid #055fdc;
+}
+
+.navbar-name {
+    font-weight: bold;
+    padding-right: 10px;
+    border-right: 1px solid black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-name .fa-code {
+    font-size: 2.4rem;
+    color: #055fdc;
+}
+
+header {
+    padding: 40px 60px;
+    background-color: #112745;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+header div h1 {
+    font-size: 3.4rem;
+    color: whitesmoke;
+    margin: 50px 0 0 0;
+}
+
+header div h1 span {
+    color: #67bff8;
+}
+
+header div p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: whitesmoke;
+    margin: 10px 0;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 18px 25px;
+    border-radius: 40px;
+    margin: 20px 0 20px 0;
+    background-color: #055fdc;
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.button svg {
+    font-size: 1.6rem;
+}
+
+#services-section {
+    padding: 40px 60px;
+    background-color: whitesmoke;
+}
+
+#services-section .services-content {
+    display: flex;
+    justify-content: center;
+}
+
+#services-section .services-content div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 33%;
+    padding: 20px 15px;
+    text-align: center;
+}
+
+#services-section .services-content div:nth-child(2) {
+    border-left: 1px solid #dcdfe7;
+    border-right: 1px solid #dcdfe7;
+}
+
+#services-section .service-img {
+    font-size: 4rem;
+    color: #055fdc;
+}
+
+#services-section .service-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#services-section .service-description {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+#about-section {
+    padding: 40px 60px;
+    background-color: #eef2fa;
+}
+
+#about-section .about-content {
+    display: flex;
+    align-items: center;
+}
+
+
+#about-section .about-content div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 60%;
+    margin-right: 100px;
+}
+
+#about-section .about-content div p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+.about-image {
+    font-size: 12rem;
+    margin-left: 10px;
+    color: #b2c4df;
+}
+
+#contact-section {
+    padding: 40px 60px;
+    background-color: whitesmoke;
+}
+
+#contact-section .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#contact-section .container p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 18px 0;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: center; 
+}
+
+hr {
+    width: 80px;
+    height: 4px;
+    border: none;
+    border: 2px solid #055fdc;
+    border-radius: 20px;
+    margin: 8px auto;
+    background-color: #055fdc;
+    background-clip: padding-box;
+}
+
+.remove-horizontal-margin {
+    margin: 8px 0;
+}
+
+footer {
+    padding: 40px 60px;
+    background-color: #102442;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container p {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 10px 20px;
+    border-right: 1px solid #f8f9fa;
+    color: #f8f9fa;
+}
+
+footer .container p .fa-code {
+    font-size: 2rem;
+}
+
+footer .container ul {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px;
+    list-style: none;
+}
+
+footer .container ul li a {
+    font-size: 1.8rem;
+    color: #f8f9fa;
+    cursor: pointer;
+}
