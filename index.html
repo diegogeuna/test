@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Desarrollo de sitios web y soporte técnico en Punta Alta. Soluciones tecnológicas para particulares y negocios.">
     <title>Diego M. Geuna - Servicios Tecnológicos</title>
     <link rel="stylesheet" href="./index.css"/>
     <!-- Google Fonts -->
@@ -12,97 +13,143 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/b7b84cd73d.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <nav>
-        <div class="container">
-            <div>
-                <p class="navbar-name"><i class="fa-solid fa-code"></i> Diego M. Geuna</p>
+<body id="top">
+    <!--Navbar Section-->
+    <nav class="navbar" aria-label="Navegación principal">
+        <div class="container navbar-inner">
+            <div class="navbar-brand">
+                <a class="navbar-name" href="#top">
+                    <i class="fa-solid fa-code" aria-hidden="true"></i>
+                    Diego M. Geuna
+                </a>
                 <p class="navbar-description">Desarrollo Web & Soporte Técnico</p>
             </div>
-            <div>
-                <ul class="navbar-menu">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#services-container">Servicios</a></li>
-                    <li><a href="#about-container">Sobre mí</a></li>
-                    <li><a href="#contact-container">Contacto</a></li>
-                </ul>
-            </div>
+            <ul class="navbar-menu">
+                <li><a class="navbar-link" href="#top">Inicio</a></li>
+                <li><a class="navbar-link" href="#services-section">Servicios</a></li>
+                <li><a class="navbar-link" href="#about-section">Sobre mí</a></li>
+                <li><a class="navbar-link" href="#contact-section">Contacto</a></li>
+            </ul>
         </div>
     </nav>
-    <header>
+    <!-- Header Section -->
+    <header class="header">
         <div class="container">
-            <h1>Soluciones Tecnológicas<br/> para <span>tus ideas</span></h1>
-            <p>Desarrollo de sitios web y soporte técnico para<br/> partículares y negocios.</p>
-            <a class="button" href="#services-container">Conocé mis servicios <i class="fa-solid fa-angle-right"></i></a>
+            <div class="header-content">
+                <h1 class="header-title">Soluciones Tecnológicas para <span>tus ideas</span></h1>
+                <p class="header-description">Desarrollo de sitios web y soporte técnico para particulares y negocios.</p>
+                <a class="button" 
+                   href="#services-section">
+                   Conocé mis servicios 
+                   <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
     </header>
+    <!-- Main Section -->
     <main>
-        <section id="services-section">
-            <!-- Mis servicios -->
+        <!-- Mis servicios Section -->
+        <section id="services-section" class="services">
             <div class="container">
                 <div>
                     <h2 class="section-title">Mis Servicios</h2>
-                    <hr/>
+                    <span class="section-title-underline" aria-hidden="true"></span>
                 </div>
-                <div class="services-content">
-                    <div>
-                        <p class="service-img"><i class="fa-solid fa-laptop-code"></i></p>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                        </div>
                         <h3 class="service-title">Desarrollo Web</h3>
-                        <p class="service-description">Sitios modernos, rápidos y adaptados a todos los dispositivos.</p>
-                    </div>
-                    <div>
-                        <p class="service-img"><i class="fa-solid fa-wrench"></i></p>
+                        <p class="service-description">Sitios simples, modernos, rápidos y adaptados a todos los dispositivos.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-wrench" aria-hidden="true"></i>
+                        </div>
                         <h3 class="service-title">Soporte Técnico</h3>
                         <p class="service-description">Resolución de problemas, mantenimiento y asesoramiento en hardware y software.</p>
-                    </div>
-                    <div>
-                        <p class="service-img"><i class="fa-solid fa-server"></i></p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-server" aria-hidden="true"></i>
+                        </div>
                         <h3 class="service-title">Soluciones Personalizadas</h3>
                         <p class="service-description">Proyectos a medida según tus necesidades.</p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
-        <section id="about-section">
-            <!-- Sobre mi -->
+        <!-- Sobre mi Section -->
+        <section id="about-section" class="about">
             <div class="container">
                 <div class="about-content">
-                    <div>
+                    <div class="about-text">
                         <div>
                             <h2 class="section-title">Sobre mí</h2>
-                            <hr class="remove-horizontal-margin"/>
+                            <span class="section-title-underline remove-horizontal-margin" aria-hidden="true"></span>
                         </div>
                         <p>Soy desarrollador web y técnico en informática, con experiencia en soporte de sistemas, redes y desarrollo de soluciones digitales.</p>
-                        <p>Mi objetivo es brindarte un servicio profesional, confiable y adaptado a tus necesidades, ya sea para tu negocio o proyeccto personal.</p>
+                        <p>Mi objetivo es brindarte un servicio profesional, confiable y adaptado a tus necesidades, ya sea para tu negocio o proyecto personal.</p>
                     </div>
                     <div class="about-image">
-                        <i class="fa-solid fa-code"></i>
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="contact-section">
-            <!-- Hablamos -->
-            <div class=container>
+        <!-- Hablamos Section -->
+        <section id="contact-section" class="contact">
+            <div class="container">
                 <div>
-                    <h3 class="section-title">¿Hablamos?</h3>
-                    <hr/>
+                    <h2 class="section-title">¿Hablamos?</h2>
+                    <span class="section-title-underline" aria-hidden="true"></span>
                 </div>
-                <p>Consultá sin compromiso. Estoy para ayudarte.</p>
-                <a class="button" href=""><i class="fa-brands fa-whatsapp"></i> Contactame por WhatsApp</a>
+                <div class="contact-content">
+                    <p class="contact-description">Consultá sin compromiso. Estoy para ayudarte.</p>
+                    <a class="button" href="https://wa.me/5492932556858"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Contactame por WhatsApp</a>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
+    <!-- Footer Section -->
+    <footer class="footer">
         <div class="container">
-            <p><i class="footer-icon fa-solid fa-code"></i> Diego M. Geuna</p>
-            <p><i class="fa-solid fa-location-dot"></i> Punta Alta, Buenos Aires</p>
-            <p><i class="fa-solid fa-display"></i> Desarrollo · Soporte Técnico</p>
-            <ul>
-                <li><a href="https://github.com/diegogeuna" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                <li><a href="https://linkedin.com/diegogeuna" target="_blank"><i class="fa-brands fa-square-linkedin"></i></a></li>
-                <li><a href="mailto:diegomgeuna@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a></li>
-            </ul>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p><i class="footer-icon fa-solid fa-code" aria-hidden="true"></i> Diego M. Geuna</p>
+                    <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Punta Alta, Buenos Aires</p>
+                    <p><i class="fa-solid fa-display" aria-hidden="true"></i> Desarrollo · Soporte Técnico</p>
+                </div>
+                <ul class="footer-social">
+                    <li>
+                        <a href="https://github.com/diegogeuna" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visita mi perfil de GitHub"
+                        aria-hidden="true">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/diegogeuna"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visita mi perfil de LinkedIn"
+                        aria-hidden="true">
+                        <i class="fa-brands fa-square-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:diegomgeuna@gmail.com"
+                        aria-label="Enviame un correo electrónico"
+                        aria-hidden="true">
+                        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </footer>
 </body>

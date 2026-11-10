@@ -1,198 +1,62 @@
+/* ========================
+    1. Globals
+======================== */
+
 * {
     box-sizing: border-box;
+}
+
+body {
     padding: 0;
     margin: 0;
     font-family: "Inter", sans-serif;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 .container {
+    width: 100%;
     max-width: 1280px;
-    margin: auto;
+    padding-inline: 24px; /* Each section control it's own vertical padding, but all of them has 24px horizontally defined here. */
+    margin-inline: auto;
 }
 
-nav {
-    padding: 20px 60px;
-    background-color: whitesmoke;
-}
-
-nav div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
-
-nav div div {
-    display: flex;
-    gap: 10px;
-}
-
-nav .container div ul {
-    display: flex;
-    gap: 10px;
-    list-style: none;
-}
-
-nav .container div ul li a {
-    text-decoration: none;
-    color: #04062a;
-    padding: 4px;
-}
-
-nav .container div ul li:first-child a {
-    color: #055fdc;
-    border-bottom: 3px solid #055fdc;
-}
-
-.navbar-name {
-    font-weight: bold;
-    padding-right: 10px;
-    border-right: 1px solid black;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.navbar-name .fa-code {
-    font-size: 2.4rem;
-    color: #055fdc;
-}
-
-header {
-    padding: 40px 60px;
-    background-color: #112745;
-}
-
-header div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-}
-
-header div h1 {
-    font-size: 3.4rem;
-    color: whitesmoke;
-    margin: 50px 0 0 0;
-}
-
-header div h1 span {
-    color: #67bff8;
-}
-
-header div p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: whitesmoke;
-    margin: 10px 0;
-}
+/* ========================
+    2. Reusable Components
+======================== */
 
 .button {
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    padding: 18px 30px;
+    border-radius: 30px;
+    margin: 20px 0;
+    font-size: 1.1rem;
+    font-family: inherit;
+    font-weight: 500;
     text-decoration: none;
-    padding: 18px 25px;
-    border-radius: 40px;
-    margin: 20px 0 20px 0;
-    background-color: #055fdc;
     color: whitesmoke;
-    cursor: pointer;
-    font-size: 1.1rem;
+    background-color: #055fdc;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
 }
 
-.button svg {
+.button:hover {
+    background-color: #034bb0;
+    transform: translateY(-2px);
+}
+
+.button:focus-visible {
+    outline: 3px solid #67bff8;
+    outline-offset: 4px;
+}
+
+.button svg  {
     font-size: 1.6rem;
-}
-
-#services-section {
-    padding: 40px 60px;
-    background-color: whitesmoke;
-}
-
-#services-section .services-content {
-    display: flex;
-    justify-content: center;
-}
-
-#services-section .services-content div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 33%;
-    padding: 20px 15px;
-    text-align: center;
-}
-
-#services-section .services-content div:nth-child(2) {
-    border-left: 1px solid #dcdfe7;
-    border-right: 1px solid #dcdfe7;
-}
-
-#services-section .service-img {
-    font-size: 4rem;
-    color: #055fdc;
-}
-
-#services-section .service-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-#services-section .service-description {
-    font-size: 1.1rem;
-    font-weight: 300;
-}
-
-#about-section {
-    padding: 40px 60px;
-    background-color: #eef2fa;
-}
-
-#about-section .about-content {
-    display: flex;
-    align-items: center;
-}
-
-
-#about-section .about-content div:first-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    width: 60%;
-    margin-right: 100px;
-}
-
-#about-section .about-content div p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin: 10px 0;
-}
-
-.about-image {
-    font-size: 12rem;
-    margin-left: 10px;
-    color: #b2c4df;
-}
-
-#contact-section {
-    padding: 40px 60px;
-    background-color: whitesmoke;
-}
-
-#contact-section .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#contact-section .container p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin: 18px 0;
 }
 
 .section-title {
@@ -201,58 +65,278 @@ header div p {
     text-align: center; 
 }
 
-hr {
+.section-title-underline {
     width: 80px;
     height: 4px;
-    border: none;
-    border: 2px solid #055fdc;
+    display: block;
     border-radius: 20px;
-    margin: 8px auto;
+    margin: -20px auto 20px;
     background-color: #055fdc;
     background-clip: padding-box;
 }
 
 .remove-horizontal-margin {
-    margin: 8px 0;
+    margin: -20px 0 20px;
 }
 
-footer {
-    padding: 40px 60px;
+/* ========================
+    3. Navbar
+======================== */
+
+.navbar {
+    padding: 20px 0;
+    background-color: whitesmoke;
+}
+
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+    border-right: 1px solid black;
+    font-weight: bold;
+    text-decoration: none;
+    color: #04062a;
+}
+
+.navbar-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.navbar-name .fa-code {
+    font-size: 2.4rem;
+    color: #055fdc;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar-menu li:first-child .navbar-link {
+    border-bottom: 3px solid #055fdc;
+    color: #055fdc;
+}
+
+.navbar-link {
+    display: inline-block;
+    padding: 8px 4px;
+    text-decoration: none;
+    color: #04062a;
+}
+
+.navbar-link:hover {
+    color: #055fdc;
+}
+
+.navbar-link:focus-visible {
+    outline: 2px solid #055fdc;
+    outline-offset: 4px;
+}
+
+/* ========================
+    4. Header
+======================== */
+
+.header {
+    padding: 60px 0;
+    background-color: #112745;
+}
+
+.header-title {
+    margin: 50px 0 0 0;
+    font-size: clamp(2.2rem, 5vw, 3.4rem); /* clamp(min, prefered, max) */
+    color: whitesmoke;
+}
+
+.header-title span {
+    color: #67bff8;
+}
+
+.header-description {
+    margin: 25px 0 50px 0;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 300;
+    color: whitesmoke;
+}
+
+/* ========================
+    5. Servicios
+======================== */
+
+.services {
+    padding: 40px 0;
+    background-color: whitesmoke;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+    text-align: center;
+}
+
+.service-card:nth-child(2) {
+    border-left: 1px solid #dcdfe7;
+    border-right: 1px solid #dcdfe7;
+}
+
+.service-icon {
+    font-size: 4rem;
+    color: #055fdc;
+}
+
+.service-title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.service-description {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* ========================
+    6. About
+======================== */
+
+.about {
+    padding: 40px 0;
+    background-color: #eef2fa;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-text p {
+    margin: 14px 0;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.about-image {
+    font-size: 14rem;
+    color: #b2c4df;
+}
+
+/* ========================
+    7. Contact
+======================== */
+
+.contact {
+    padding: 40px 0;
+    background-color: whitesmoke;
+}
+
+.contact-content {
+    text-align: center;
+}
+
+.contact-description {
+    margin: 18px 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* ========================
+    8. Footer
+======================== */
+
+.footer {
+    padding: 40px 0;
     background-color: #102442;
 }
 
-footer .container {
+.footer-content {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-footer .container p {
+.footer-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-info p {
+    height: 52px;
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 0.9rem;
-    font-weight: 300;
     padding: 10px 20px;
     border-right: 1px solid #f8f9fa;
+    font-size: 0.9rem;
+    font-weight: 300;
     color: #f8f9fa;
 }
 
-footer .container p .fa-code {
+.footer-info p .fa-code {
+    margin-right: 10px;
     font-size: 2rem;
 }
 
-footer .container ul {
+.footer-social {
     display: flex;
     gap: 10px;
     padding: 0 20px;
     list-style: none;
 }
 
-footer .container ul li a {
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     font-size: 1.8rem;
     color: #f8f9fa;
-    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
-/* comment */
+.footer-social a:hover {
+    color: #67bff8;
+}
