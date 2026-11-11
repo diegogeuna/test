@@ -340,3 +340,112 @@ img {
 .footer-social a:hover {
     color: #67bff8;
 }
+
+/* ========================
+   9. Responsive Design
+======================== */
+
+/* Tablets y dispositivos medianos */
+
+@media (max-width: 900px) {
+
+    .container {
+        padding-inline: 30px;
+    }
+
+    .header-content {
+        max-width: 85%;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-card:nth-child(2) {
+        border-left: 1px solid #dcdfe7;
+        border-right: none;
+    }
+
+    .service-card:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    .about-content {
+        gap: 30px;
+    }
+
+    .about-image {
+        font-size: 9rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Dispositivos móviles */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding-inline: 20px;
+    }
+
+    .navbar-inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .header {
+        padding: 40px 0;
+    }
+
+    .header-content {
+        max-width: 100%;
+    }
+
+    .header-title {
+        margin-top: 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card:nth-child(2) {
+        border-top: 1px solid #dcdfe7;
+        border-bottom: 1px solid #dcdfe7;
+        border-left: none;
+        border-right: none;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        font-size: 7rem;
+        text-align: center;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-info p {
+        border-right: none;
+    }
+
+    .footer-social {
+        margin: 0;
+    }
+}
